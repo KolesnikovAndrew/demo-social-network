@@ -1,0 +1,28 @@
+.postsBlock {
+  padding: 10px;
+  background-color: whitesmoke;
+  border-radius: 24px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.posts {
+  margin-top: 20px;
+}
+
+.submitButton {
+  border: 1px solid rgb(76, 169, 212);
+  background-color: rgb(76, 169, 212);
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: 0.5s;
+  color: black;
+  border: 1px solid rgb(76, 169, 212);
+}

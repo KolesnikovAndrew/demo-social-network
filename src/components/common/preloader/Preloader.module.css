@@ -1,0 +1,10 @@
+.preloader {
+  width: 45px;
+  border-radius: 50%;
+  padding: 5px;
+  filter: hue-rotate(180deg);
+}
+.preloaderContainer {
+  text-align: center;
+  background-color: rgb(118, 178, 202);
+}

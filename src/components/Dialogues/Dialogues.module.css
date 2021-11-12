@@ -1,0 +1,62 @@
+.dialogues {
+  display: grid;
+  grid-template-columns: 2fr 10fr 1fr;
+  grid-template-areas: "d m m" "d m m" ". s s";
+  padding-top: 20px;
+}
+
+.dialogue_items {
+  padding: 10px;
+  grid-area: d;
+}
+.dialogue_items .active {
+  color: gold;
+  background-color: purple;
+}
+
+.dialogue_items .dialogue {
+}
+
+.messages {
+  padding: 10px;
+  grid-area: m;
+  border-radius: 24px;
+  background-color: whitesmoke;
+  padding-top: 10px;
+}
+
+.messages .message {
+  color: black;
+  background-color: whitesmoke;
+  background-size: 100px 40px;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.dialogue {
+  color: black;
+  background-size: 100px 40px;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.send_message {
+  grid-area: s;
+  margin-left: 10px;
+}
+
+.submitButton {
+  border: 1px solid rgb(76, 169, 212);
+  background-color: rgb(76, 169, 212);
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: 0.5s;
+  color: black;
+  border: 1px solid rgb(76, 169, 212);
+}

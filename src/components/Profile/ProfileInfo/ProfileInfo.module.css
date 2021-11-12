@@ -1,0 +1,46 @@
+img {
+  width: 1000px;
+}
+
+.description_block {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.profilePhoto {
+  width: 200px;
+  height: 200px;
+}
+.userName {
+  font-size: 3vh;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #969494;
+}
+.additionalInfoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  justify-self: stretch;
+  background-color: whitesmoke;
+  border-radius: 24px;
+  padding-top: 60px;
+  padding-right: 200px;
+  padding-left: 20px;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-self: stretch;
+  border-radius: 24px;
+  padding-right: 200px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-left: 20px;
+  background-color: whitesmoke;
+}
