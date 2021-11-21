@@ -43,12 +43,12 @@ const AddMessageForm = (props) => {
           component={Textarea}
           validate={[requiredField, messageLength100]}
           name="newMessageText"
-          placeholder="Напишите сообщение..."
+          placeholder="Write a message..."
           rows="5"
           cols="50"
         />
       </div>
-      <button className={s.submitButton}>Отправить</button>
+      <button className={s.submitButton}>Send</button>
     </form>
   );
 };

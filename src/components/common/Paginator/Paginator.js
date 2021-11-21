@@ -22,7 +22,7 @@ let Paginator = ({
   let rightPortionPageNumber = portionNumber * portionSize;
   return (
     <div>
-      <div className={styles.paginator}>
+      <div className={cn(styles.paginator)}>
         {portionCount > 1 && (
           <button
             className={styles.paginatorButton}
@@ -40,7 +40,13 @@ let Paginator = ({
           .map((p) => {
             return (
               <span
-                className={currentPage === p && styles.selectedPage}
+                className={cn(
+                  {
+                    [styles.selectedPage]: currentPage === p,
+                  },
+                  styles.pageNumber
+                )}
+                key={p}
                 onClick={(e) => {
                   onPageChanged(p);
                 }}

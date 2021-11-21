@@ -3,6 +3,7 @@ import { getAuthUserData } from "./auth-reducer";
 const INITIALIZED_SUCCESS = "INITIALIZED_SUCCESS";
 let initialState = {
   initialized: false,
+  glovalError: null,
 };
 export const appReducer = (state = initialState, action) => {
   switch (action.type) {

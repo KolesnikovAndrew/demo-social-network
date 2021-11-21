@@ -7,7 +7,7 @@ import { Input, createField } from "../common/FormsControl/FormsControl";
 import { requiredField } from "../utils/validators/validators";
 import s from "../common/FormsControl/FormsControl.module.css";
 
-export const LoginForm = ({ handleSubmit, error }) => {
+export const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -26,7 +26,14 @@ export const LoginForm = ({ handleSubmit, error }) => {
           },
           "remember me"
         )}
-
+        {captchaUrl && <img src={captchaUrl} />}
+        {captchaUrl &&
+          createField(
+            "Write symbols from image",
+            "captcha",
+            requiredField,
+            Input
+          )}
         {error && <div className={s.formSummaryError}>{error}</div>}
         <div>
           <button>Login</button>
@@ -42,19 +49,25 @@ const LoginReduxForm = reduxForm({
 
 export const Login = (props) => {
   const onSubmit = (formData) => {
-    props.login(formData.email, formData.password, formData.rememberMe);
+    props.login(
+      formData.email,
+      formData.password,
+      formData.rememberMe,
+      formData.captcha
+    );
   };
   if (props.isAuth) {
     return <Redirect to={"/profile"} />;
   }
   return (
     <div>
-      <h1>Вход</h1>
-      <LoginReduxForm onSubmit={onSubmit} />
+      <h1>Login</h1>
+      <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl} />
     </div>
   );
 };
 const mapStateToProps = (state) => ({
+  captchaUrl: state.auth.captchaUrl,
   isAuth: state.auth.isAuth,
 });
 export default connect(mapStateToProps, { login })(Login);

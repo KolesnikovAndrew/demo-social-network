@@ -32,11 +32,17 @@ let AddNewPostFormRedux = reduxForm({ form: "ProfileAddNewPostForm" })(
 );
 
 const MyPosts = React.memo((props) => {
-  console.log("RENDER");
-
-  let postsElements = props.posts.map((p) => (
-    <Post message={p.message} likesCount={p.likescount} id={p.id} />
-  ));
+  let postsElements = props.posts
+    .reverse()
+    .map((p) => (
+      <Post
+        key={p.id}
+        message={p.message}
+        likesCount={p.likescount}
+        id={p.id}
+        profile={props.profile}
+      />
+    ));
 
   let onAddPost = (value) => {
     props.addPost(value.newPostText);
@@ -44,7 +50,7 @@ const MyPosts = React.memo((props) => {
 
   return (
     <div className={s.postsBlock}>
-      <h3>Мои посты</h3>
+      <h3>My posts</h3>
       <AddNewPostFormRedux onSubmit={onAddPost} />
       <div className={s.posts}>{postsElements}</div>
     </div>

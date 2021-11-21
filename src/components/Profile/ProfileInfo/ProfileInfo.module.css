@@ -19,11 +19,6 @@ img {
   border-bottom: 1px solid #969494;
 }
 .additionalInfoSection {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  justify-self: stretch;
   background-color: whitesmoke;
   border-radius: 24px;
   padding-top: 60px;
@@ -43,4 +38,9 @@ img {
   padding-top: 10px;
   padding-left: 20px;
   background-color: whitesmoke;
+}
+
+.contact {
+  padding-left: 10px;
+  padding-bottom: 5px;
 }

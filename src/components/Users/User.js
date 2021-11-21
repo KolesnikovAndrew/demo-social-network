@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./users.module.css";
+import styles from "./Users.module.css";
 import userphoto from "../../assets/images/userphoto.png";
 import { NavLink } from "react-router-dom";
 import Paginator from "../common/Paginator/Paginator";
@@ -23,8 +23,8 @@ let User = ({ user, followingInProgress, unfollow, follow, ...props }) => {
           <div>{user.status}</div>
         </span>
         <span>
-          <div>{"Город не указан"}</div>
-          <div>{"Страна не указана"}</div>
+          <div>{"City is not specified"}</div>
+          <div>{"Country is not specified"}</div>
         </span>
       </span>
       {user.followed ? (
@@ -35,7 +35,7 @@ let User = ({ user, followingInProgress, unfollow, follow, ...props }) => {
             unfollow(user.id);
           }}
         >
-          Отписаться
+          Unfollow
         </button>
       ) : (
         <button
@@ -45,7 +45,7 @@ let User = ({ user, followingInProgress, unfollow, follow, ...props }) => {
             follow(user.id);
           }}
         >
-          Подписаться
+          Follow
         </button>
       )}
     </div>

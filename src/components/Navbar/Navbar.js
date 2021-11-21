@@ -7,38 +7,33 @@ const Navbar = () => {
     <nav className={s.nav}>
       <div className={s.item}>
         <NavLink to="/profile" activeClassName={s.active}>
-          Моя страница
+          My profile
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/dialogues" activeClassName={s.active}>
-          Сообщения
+          Messages
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/users" activeClassName={s.active}>
-          Пользователи
+          Users
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/news" activeClassName={s.active}>
-          Новости
+          News
         </NavLink>
       </div>
       <div className={s.item}>
-        <NavLink to="/Music" activeClassName={s.active}>
-          Музыка
+        <NavLink to="/music" activeClassName={s.active}>
+          Music
         </NavLink>
       </div>
       <div className={s.item}>
         <NavLink to="/settings" activeClassName={s.active}>
-          Настройки
+          Settings
         </NavLink>
-      </div>
-      <div className={s.item}>
-        <a href="www.google.com" activeClassName={s.active}>
-          Реклама
-        </a>
       </div>
     </nav>
   );

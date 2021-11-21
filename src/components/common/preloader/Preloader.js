@@ -5,9 +5,6 @@ let Preloader = (props) => {
   return (
     <div className={s.preloaderContainer}>
       <img src={preloader} className={s.preloader} />
-      {/* <video width="320" height="240">
-        <source src={preloader} type="video/mp4" />
-      </video> */}
     </div>
   );
 };

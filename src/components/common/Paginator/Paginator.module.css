@@ -5,7 +5,7 @@
   gap: 5px;
   font-weight: bold;
   padding: 15px;
-  width: 500px;
+  align-items: center;
 }
 
 .selectedPage {
