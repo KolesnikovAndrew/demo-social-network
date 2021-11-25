@@ -14,7 +14,7 @@ import store from "./redux/redux-store";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { withSuspense } from "./hoc/withSuspense";
-import Preloader from "./components/common/preloader/Preloader";
+import Preloader from "./components/common/Preloader/Preloader";
 
 const DialoguesContainer = React.lazy(() =>
   import("./components/Dialogues/DialoguesContainer")

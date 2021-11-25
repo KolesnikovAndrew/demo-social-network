@@ -10,11 +10,8 @@ import style from "../../common/FormsControl/FormsControl.module.css";
 export const ProfileDataForm = ({ handleSubmit, profile, error }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <button>Save</button>
-      </div>
       {error && <div className={style.formSummaryError}>{error}</div>}
-      <b>About me: </b> {createField("Full name", "fullName", [], Input)}
+      <b>Name: </b> {createField("Full name", "fullName", [], Input)}
       <b>About me: </b> {createField("About me", "aboutMe", [], Textarea)}
       <div>
         <b>Looking for a job:</b>
@@ -38,6 +35,9 @@ export const ProfileDataForm = ({ handleSubmit, profile, error }) => {
             </div>
           );
         })}
+      </div>
+      <div>
+        <button className={s.saveButton}>Save</button>
       </div>
     </form>
   );

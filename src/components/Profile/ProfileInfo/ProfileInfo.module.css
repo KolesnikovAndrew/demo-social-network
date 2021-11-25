@@ -1,17 +1,13 @@
-img {
-  width: 1000px;
-}
-
 .description_block {
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 10px;
 }
 
 .profilePhoto {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
 }
 .userName {
   font-size: 3vh;
@@ -21,8 +17,8 @@ img {
 .additionalInfoSection {
   background-color: whitesmoke;
   border-radius: 24px;
-  padding-top: 60px;
-  padding-right: 200px;
+  padding-top: 20px;
+  padding-right: 20px;
   padding-left: 20px;
 }
 
@@ -33,7 +29,7 @@ img {
   gap: 20px;
   justify-self: stretch;
   border-radius: 24px;
-  padding-right: 200px;
+  padding-right: 20px;
   padding-bottom: 15px;
   padding-top: 10px;
   padding-left: 20px;
@@ -43,4 +39,58 @@ img {
 .contact {
   padding-left: 10px;
   padding-bottom: 5px;
+}
+
+.editButton {
+  border: 1px solid rgb(76, 169, 212);
+  background-color: rgb(76, 169, 212);
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 90px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.editButton:hover,
+.saveButton:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: 0.5s;
+  color: black;
+  border: 1px solid rgb(76, 169, 212);
+}
+
+.saveButton {
+  border: 1px solid rgb(76, 169, 212);
+  background-color: rgb(76, 169, 212);
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.editProfilePhotoButton {
+  border: 1px solid rgb(76, 169, 212);
+  background-color: rgb(76, 169, 212);
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.editProfilePhotoButton:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: 0.5s;
+  color: black;
+  border: 1px solid rgb(76, 169, 212);
+}
+
+.userInfoHeader {
+  text-align: center;
 }

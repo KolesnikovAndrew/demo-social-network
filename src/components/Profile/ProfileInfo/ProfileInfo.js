@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import Preloader from "../../common/preloader/Preloader";
+import Preloader from "../../common/Preloader/Preloader";
 import s from "./ProfileInfo.module.css";
 
 import userphoto from "../../../assets/images/userphoto.png";
 import ProfileStatus from "./ProfileStatus";
 import ProfileDataForm from "./ProfileDataForm";
+import Button from "../../common/Button/Button";
+import { Input } from "../../common/FormsControl/FormsControl";
 
 const ProfileInfo = ({
   profile,
@@ -54,7 +56,17 @@ const ProfileInfo = ({
           />
 
           {isOwner && (
-            <input type={"file"} onChange={onMainPhotoSelected}></input>
+            <div>
+              <input
+                type={"file"}
+                onChange={onMainPhotoSelected}
+                style={{ display: "none" }}
+                id="file"
+              ></input>
+              <div className={s.editProfilePhotoButton}>
+                <label for="file">Edit Profile Photo</label>
+              </div>
+            </div>
           )}
         </div>
         <div className={s.additionalInfoSection}>
@@ -82,9 +94,10 @@ const ProfileInfo = ({
 const ProfileData = ({ profile, isOwner, activateEditMode }) => {
   return (
     <div>
-      <div>{isOwner && <button onClick={activateEditMode}>edit</button>}</div>
-      <b>About me: {profile.aboutMe}</b>
-
+      <h1 className={s.userInfoHeader}>USER INFO</h1>
+      <br />
+      <b>About me</b>: {profile.aboutMe}
+      <hr />
       <div>
         <b>Looking for a job:</b> {profile.lookingForAJob ? "Yes" : "No"}
       </div>
@@ -93,8 +106,9 @@ const ProfileData = ({ profile, isOwner, activateEditMode }) => {
           <p>My proffessional skills: {profile.lookingForAJobDescription}</p>
         </div>
       )}
+      <hr />
       <div>
-        <b>Contacts</b>:{" "}
+        <b>Contacts</b>:
         {Object.keys(profile.contacts).map((key) => {
           return (
             <Contact
@@ -104,6 +118,14 @@ const ProfileData = ({ profile, isOwner, activateEditMode }) => {
             />
           );
         })}
+      </div>
+      <hr />
+      <div>
+        {isOwner && (
+          <button onClick={activateEditMode} className={s.editButton}>
+            Edit
+          </button>
+        )}
       </div>
     </div>
   );

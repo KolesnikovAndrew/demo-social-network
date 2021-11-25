@@ -21,7 +21,7 @@ export const Textarea = (props) => {
   const { input, meta, child, ...restProps } = props;
   return (
     <FormsControl {...props}>
-      <textarea {...restProps} {...input} />
+      <textarea {...restProps} {...input} className={s.myposts_textarea} />
     </FormsControl>
   );
 };

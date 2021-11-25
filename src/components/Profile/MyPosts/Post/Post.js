@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import s from "./Post.module.css";
 import userphoto from "../../../../assets/images/userphoto.png";
 import like from "../../../../assets/images/like.png";
-import Preloader from "../../../common/preloader/Preloader";
+import Preloader from "../../../common/Preloader/Preloader";
 import cn from "classnames";
 const Post = (props) => {
   let [addLike, setLike] = useState(false);

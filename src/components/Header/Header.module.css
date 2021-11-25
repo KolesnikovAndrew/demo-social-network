@@ -5,6 +5,8 @@
 .header img {
   width: 50px;
   height: 50px;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 .loginBlock {
   margin-left: 75%;
@@ -13,4 +15,21 @@
 }
 .loginBlock a {
   color: white;
+}
+
+.logoutButton {
+  border: 1px solid rgb(76, 169, 212);
+  background-color: rgb(76, 169, 212);
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.logoutButton:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: 0.5s;
+  color: black;
+  border: 1px solid rgb(76, 169, 212);
 }

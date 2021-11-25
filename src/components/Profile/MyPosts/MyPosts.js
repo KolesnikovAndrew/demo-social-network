@@ -21,7 +21,7 @@ let AddNewPostForm = (props) => {
         />
       </div>
       <div>
-        <button className={s.submitButton}>Опубликовать</button>
+        <button className={s.submitButton}>Post</button>
       </div>
     </form>
   );
@@ -50,7 +50,7 @@ const MyPosts = React.memo((props) => {
 
   return (
     <div className={s.postsBlock}>
-      <h3>My posts</h3>
+      <h3 className={s.myPostsHeader}>My posts</h3>
       <AddNewPostFormRedux onSubmit={onAddPost} />
       <div className={s.posts}>{postsElements}</div>
     </div>

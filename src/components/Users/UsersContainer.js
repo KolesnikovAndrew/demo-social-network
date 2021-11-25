@@ -8,7 +8,7 @@ import {
   requestUsers,
 } from "../../redux/users-reducer";
 import Users from "./Users";
-import Preloader from "../common/preloader/Preloader";
+import Preloader from "../common/Preloader/Preloader";
 import { compose } from "redux";
 import {
   getPageSize,
